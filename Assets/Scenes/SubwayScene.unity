@@ -170,6 +170,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1681267281977647135, guid: d3779b68e7d00f54cacfe6ba6e2acef4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1111
+      objectReference: {fileID: 0}
+    - target: {fileID: -1681267281977647135, guid: d3779b68e7d00f54cacfe6ba6e2acef4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: -1681267281977647135, guid: d3779b68e7d00f54cacfe6ba6e2acef4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.976
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d3779b68e7d00f54cacfe6ba6e2acef4, type: 3}
       propertyPath: m_Name
       value: uploads_files_4492069_Subway
@@ -1343,6 +1355,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d3779b68e7d00f54cacfe6ba6e2acef4, type: 3}
       propertyPath: m_Name
       value: uploads_files_4492069_Subway (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057022728546059721, guid: d3779b68e7d00f54cacfe6ba6e2acef4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1092
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057022728546059721, guid: d3779b68e7d00f54cacfe6ba6e2acef4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057022728546059721, guid: d3779b68e7d00f54cacfe6ba6e2acef4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.976
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
