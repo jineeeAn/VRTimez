@@ -1264,7 +1264,7 @@ GameObject:
   - component: {fileID: 276361573}
   - component: {fileID: 276361572}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1715,7 +1715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1143879779}
   m_Layer: 0
-  m_Name: GrabPosition_L
+  m_Name: GrabPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
