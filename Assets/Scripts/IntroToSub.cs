@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class IntroToSub : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("IntroScene");
+        SceneManager.LoadScene("SubwayScene");
     }
 }
