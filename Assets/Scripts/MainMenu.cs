@@ -5,6 +5,6 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("IntroScene");
+        SceneManager.LoadScene("SubwayScene");
     }
 }
