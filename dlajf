@@ -1,0 +1,15 @@
+[33m3695f7d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: rebase (abort): returning to refs/heads/main
+[33mf0c88a1[m HEAD@{1}: commit: Track binaries via LFS
+[33m7571a3b[m HEAD@{2}: commit: Update Subway model and add StreamingAssets
+[33m3a0d784[m HEAD@{3}: pull --rebase origin main (start): checkout 3a0d784367e93ca871f4d495735c301468ecfdbd
+[33m3695f7d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{4}: commit: chatbot design
+[33m0df0173[m HEAD@{5}: commit (merge): Merge branch 'main' of https://github.com/jineeeAn/VRTimez
+[33mbec43b6[m HEAD@{6}: reset: moving to HEAD
+[33mbec43b6[m HEAD@{7}: reset: moving to HEAD
+[33mbec43b6[m HEAD@{8}: reset: moving to HEAD
+[33mbec43b6[m HEAD@{9}: commit: chatbot design
+[33mbfa7f84[m HEAD@{10}: commit: Track .so via LFS
+[33ma18eeb7[m HEAD@{11}: commit: design chatbot
+[33m9ebdfa7[m HEAD@{12}: commit: chatbot
+[33m1f15339[m HEAD@{13}: commit: chatbot
+[33m209946a[m HEAD@{14}: clone: from https://github.com/jineeeAn/VRTimez.git
