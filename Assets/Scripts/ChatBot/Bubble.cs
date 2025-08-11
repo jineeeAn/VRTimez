@@ -101,10 +101,25 @@ namespace LLMUnitySamples
             bubbleRectTransform.anchorMin = new Vector2(bubbleUI.leftPosition, bubbleUI.bottomPosition);
             bubbleRectTransform.anchorMax = new Vector2(bubbleUI.leftPosition, bubbleUI.bottomPosition);
             bubbleRectTransform.localScale = Vector3.one;
-            Vector2 anchoredPosition = new Vector2(bubbleUI.bubbleOffset + bubbleUI.textPadding, bubbleUI.bubbleOffset + bubbleUI.textPadding);
-            if (bubbleUI.leftPosition == 1) anchoredPosition.x *= -1;
+            Vector2 anchoredPosition = new Vector2(
+                bubbleUI.bubbleOffset + bubbleUI.textPadding,
+                bubbleUI.bubbleOffset + bubbleUI.textPadding
+            );
+
+            // 플레이어 버블: 왼쪽 위치
+            if (bubbleUI.leftPosition == 1)
+            {
+                anchoredPosition.x = -65; // AI 버블
+            }
+            else
+            {
+                anchoredPosition.x = 65;  // Player 버블
+            }
+
             if (bubbleUI.bottomPosition == 1) anchoredPosition.y *= -1;
+
             bubbleRectTransform.anchoredPosition = anchoredPosition;
+
 
             float width = bubbleUI.bubbleWidth == -1 ? bubbleRectTransform.sizeDelta.x : bubbleUI.bubbleWidth;
             float height = bubbleUI.bubbleHeight == -1 ? bubbleRectTransform.sizeDelta.y : bubbleUI.bubbleHeight;
@@ -177,6 +192,44 @@ namespace LLMUnitySamples
             placeholderObject = CreatePlaceholderObject(bubbleObject.transform, bubbleRectTransform, textObjext.text);
             inputFieldObject = CreateInputFieldObject(bubbleObject.transform, textObjext, placeholderObject.GetComponent<Text>());
             inputField = inputFieldObject.GetComponent<InputField>();
+
+            var inputRect = inputFieldObject.GetComponent<RectTransform>();
+            var phRect = placeholderObject.GetComponent<RectTransform>();
+            var textRect = bubbleObject.GetComponent<RectTransform>(); // 버블 본체
+
+            // 1) InputField/Placeholder는 "부모 꽉 채우기" (크기/위치는 부모가 결정)
+            inputRect.anchorMin = new Vector2(0f, 0f);
+            inputRect.anchorMax = new Vector2(1f, 1f);
+            inputRect.pivot = new Vector2(0.5f, 0.5f);
+            inputRect.offsetMin = Vector2.zero;
+            inputRect.offsetMax = Vector2.zero;
+
+            phRect.anchorMin = new Vector2(0f, 0f);
+            phRect.anchorMax = new Vector2(1f, 1f);
+            phRect.pivot = new Vector2(0.5f, 0.5f);
+            phRect.offsetMin = Vector2.zero;
+            phRect.offsetMax = Vector2.zero;
+
+            // 2) 버블 본체 크기/위치로 최종 결정 (InputBubble만 적용)
+            Vector2 fieldSize = new Vector2(470f, 40f);
+
+            // 크기: 버블 자체의 sizeDelta로 통일 (Text/배경/Image/입력영역 모두 여기에 맞춰짐)
+            textRect.sizeDelta = fieldSize;
+
+            // 위치: y만 +60 (x는 기존 유지)
+            //  - SetBubblePosition에서 이미 anchor/pivot은 잡혀있으니 anchoredPosition만 살짝 올리면 됨
+            var pos = textRect.anchoredPosition;
+            pos.y += 60f;
+            textRect.anchoredPosition = pos;
+
+            // (선택) 단일 줄 정렬 깔끔
+            inputField.lineType = UnityEngine.UI.InputField.LineType.SingleLine;
+            inputField.textComponent.alignment = TextAnchor.MiddleLeft;
+            ((Text)inputField.placeholder).alignment = TextAnchor.MiddleLeft;
+
+
+
+
         }
 
         static string emptyLines(string message, int lineHeight)
