@@ -148,7 +148,7 @@ namespace LLMUnitySamples
         public void WarmUpCallback()
         {
             warmUpDone = true;
-            inputBubble.SetPlaceHolderText("Message me");
+            inputBubble.SetPlaceHolderText("Ask Hampson anything");
             AllowInput();
         }
 
